@@ -58,7 +58,7 @@ function Home() {
 
   return (
     <main className="container mx-auto max-width section md:flex justify-between items-center">
-      <div>
+      <div className="w-1/2">
         <h1
           ref={h11}
           className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl xl:leading-tight font-bold"
@@ -78,8 +78,10 @@ function Home() {
           {tagline}
         </h2>
       </div>
-      <div className="mt-5 md:mt-0">
-        <img ref={myimageref} className="w-1/2 md:ml-auto" src={img} alt="Pavan MG" />
+      <div className="mt-5 md:mt-0 md:w-1/2 flex items-center">
+        <div className="relative w-full md:ml-auto">
+          <img ref={myimageref} className="w-full h-auto rounded-full object-cover aspect-square" src={img} alt="Pavan MG" />
+        </div>
       </div>
     </main>
   );
