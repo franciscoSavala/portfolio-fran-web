@@ -7,18 +7,22 @@ import profile from "./assets/profile.jpg";
 // Tech stack images
 import html from "./assets/techstack/html.png";
 import css from "./assets/techstack/css.png";
-import sass from "./assets/techstack/sass.png";
 import js from "./assets/techstack/js.png";
 import react from "./assets/techstack/react.png";
-import redux from "./assets/techstack/redux.png";
 import tailwind from "./assets/techstack/tailwind.png";
-import bootstrap from "./assets/techstack/bootstrap.png";
-import vscode from "./assets/techstack/vscode.png";
 import github from "./assets/techstack/github.png";
 import git from "./assets/techstack/git.png";
-import npm from "./assets/techstack/npm.png";
 import postman from "./assets/techstack/postman.png";
-import figma from "./assets/techstack/figma.png";
+import aws from "./assets/techstack/aws.png";
+import java from "./assets/techstack/java.png";
+import python from "./assets/techstack/python.png";
+import openai from "./assets/techstack/openai.png";
+import windsurf from "./assets/techstack/windsurf.png";
+import spring from "./assets/techstack/spring.png";
+
+// Work experience
+import mercadolibre from "./assets/company/mercadolibre.png";
+
 // Porject Images
 import projectImage1 from "./assets/projects/project1.jpg";
 import projectImage2 from "./assets/projects/project2.jpg";
@@ -52,25 +56,12 @@ export const socialMediaUrl = {
 // Enter your Work Experience here
 export const workDetails = [
   {
-    Position: "Frontend Web Developer",
-    Company: `Company Name here`,
-    Location: "Bengaluru",
+    Logo: mercadolibre,
+    Position: "Software Developer",
+    Company: `Mercado Libre`,
+    Location: "Cordoba, Argentina",
     Type: "Full Time",
-    Duration: "Sep 2021 - Dec 2021",
-  },
-  {
-    Position: "Internship",
-    Company: `Company Name here`,
-    Location: "Bengaluru",
-    Type: "Internship",
-    Duration: "Sep 2021 - Dec 2021",
-  },
-  {
-    Position: "Internship",
-    Company: `Company Name here`,
-    Location: "Bengaluru",
-    Type: "Internship",
-    Duration: "Sep 2021 - Dec 2021",
+    Duration: "Jan 2024 - Present",
   },
 ];
 
@@ -98,16 +89,16 @@ export const techStackDetails = {
   css: css,
   js: js,
   react: react,
-  redux: redux,
-  sass: sass,
   tailwind: tailwind,
-  bootstrap: bootstrap,
-  vscode: vscode,
   postman: postman,
-  npm: npm,
   git: git,
   github: github,
-  figma: figma,
+  aws: aws,
+  java: java,
+  python: python,
+  spring: spring,
+  windsurf: windsurf,
+  openai: openai
 };
 
 // Enter your Project Details here
