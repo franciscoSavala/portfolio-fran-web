@@ -19,6 +19,7 @@ import python from "./assets/techstack/python.png";
 import openai from "./assets/techstack/openai.png";
 import windsurf from "./assets/techstack/windsurf.png";
 import spring from "./assets/techstack/spring.png";
+import docker from "./assets/techstack/docker.png";
 
 // Work experience
 import mercadolibre from "./assets/company/mercadolibre.png";
@@ -40,9 +41,9 @@ export const logos = {
 // Enter your Personal Details here
 export const personalDetails = {
   name: "Francisco Savala",
-  tagline: "I build things",
+  tagline: "I build software",
   img: profile,
-  about: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+  about: `I'm a software developer who loves technology. `,
 };
 
 // Enter your Social Media URLs here
@@ -98,7 +99,8 @@ export const techStackDetails = {
   python: python,
   spring: spring,
   windsurf: windsurf,
-  openai: openai
+  openai: openai,
+  docker: docker
 };
 
 // Enter your Project Details here

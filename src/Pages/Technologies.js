@@ -17,6 +17,7 @@ function Technologies() {
     spring,
     openai,
     windsurf,
+    docker,
   } = techStackDetails;
   return (
     <main className="container mx-auto max-width pt-10 pb-20 ">
@@ -32,8 +33,9 @@ function Technologies() {
         <img src={spring} title="Spring" alt="" />
         <img src={java} title="Java" alt="" />
         <img src={aws} title="AWS" alt="" />
-        <img src={react} title="React" alt="" />
+        <img src={docker} title="Docker" alt="" />
         <img src={python} title="Python" alt="" />
+        <img src={react} title="React" alt="" />
         <img src={html} title="html" alt="" />
         <img src={css} title="CSS" alt="" />
         <img src={js} title="JavaScript" alt="" />

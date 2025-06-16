@@ -1,9 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { logos, socialMediaUrl } from "../Details";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const handleThemeToggle = () => {
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+  };
   const { linkdein, github, twitter } = socialMediaUrl;
   const toggleClass = () => {
     setIsOpen(!isOpen);
@@ -110,6 +124,65 @@ function Header() {
           </li>
         </ul>
       </nav>
+      <div className="flex items-center">
+          {/* Mobile menu button */}
+          <div onClick={toggleClass} className="cursor-pointer md:hidden">
+            <svg
+              className="stroke-dark-heading dark:stroke-white"
+              width="25"
+              height="20"
+              viewBox="0 0 16 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.4375 1.3125H14.5625M1.4375 11.3125H14.5625H1.4375ZM1.4375 6.3125H14.5625H1.4375Z"
+                strokeWidth="1.875"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
+
+          {/* Theme toggle button */}
+          <button
+            onClick={handleThemeToggle}
+            className="ml-4 p-2 rounded focus:outline-none dark:text-light-heading text-dark-heading"
+            aria-label="Toggle Dark Mode"
+          >
+            {theme === "light" ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 3v1m0 16v1m8-9h1M3 12H2m15.364 6.364l.707.707M6.343 6.343l-.707-.707M18.364 6.343l.707.707M6.343 17.657l-.707-.707M12 5a7 7 0 100 14 7 7 0 000-14z"
+                />
+              </svg>
+            )}
+          </button>
+        </div>
     </header>
   );
 }
