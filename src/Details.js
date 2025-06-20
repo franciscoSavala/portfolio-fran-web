@@ -1,6 +1,6 @@
 // Enter all your detials in this file
 // Logo images
-import logogradient from "./assets/logo.svg";
+import franlogo from "./assets/FranLogoRAW.svg";
 import logo from "./assets/logo2.svg";
 // Profile Image
 import profile from "./assets/profile.jpg";
@@ -34,7 +34,7 @@ import projectImage6 from "./assets/projects/project6.jpg";
 
 // Logos
 export const logos = {
-  logogradient: logogradient,
+  logogradient: franlogo,
   logo: logo,
 };
 
